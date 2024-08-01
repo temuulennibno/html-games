@@ -1,11 +1,11 @@
 # HTML Games
 
-## Snake
+## 1. Snake
 
-## Color game
+## 2. Color game
 
-## Connect Four
+## 3. Connect Four
 
-## Tic Tac Toe
+## 4. Tic Tac Toe
 
-## Tetris
+## 5. Tetris

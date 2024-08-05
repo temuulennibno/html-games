@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+}
+
+.tile {
+  border: 5px solid #fff;
+  border-radius: 20px;
+  width: 250px;
+  height: 250px;
+  background-color: red;
+
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.tile:hover {
+  transform: scale(1.05);
+}
+
+#point {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20px;
+  font-family: "Press Start 2P", system-ui;
+  font-size: 72px;
+}
+
+#countdown {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  font-family: "Press Start 2P", system-ui;
+  font-size: 72px;
+}
+
+#game-over {
+  position: fixed;
+  left: 0;
+  top: -100%;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 140px;
+  font-family: "Press Start 2P", system-ui;
+  transition: 0.3s all;
+}
+
+#game-over.shown {
+  top: 0;
+}

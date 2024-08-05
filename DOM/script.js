@@ -1,7 +1,4 @@
-const string = "Hello world!";
 let reversing = false;
-
-console.log("Hi");
 
 // alert("Hi");
 // const value = window.prompt("Utga oruulna uu");
@@ -22,20 +19,23 @@ const changeColor = () => {
 
 const interval = setInterval(changeColor, 1000);
 
-setTimeout(() => {
-  clearInterval(interval);
-}, 5000);
-
 let index = 0;
-
-setInterval(() => {
-  if (!reversing) {
-    document.body.innerHTML = string.slice(0, index + 2);
-    index++;
-    if (index === string.length) reversing = true;
-  } else {
-    document.body.innerHTML = string.slice(0, index - 1);
-    index--;
-    if (index === 0) reversing = false;
+let typing = true;
+const type = () => {
+  const string = "Hello world!";
+  const body = document.body;
+  body.innerText = string.slice(0, index);
+  if (index === string.length) {
+    typing = false;
   }
-}, 200);
+  if (index === 0) {
+    typing = true;
+  }
+  if (typing) {
+    index++;
+  } else {
+    index--;
+  }
+};
+
+setInterval(type, 200);

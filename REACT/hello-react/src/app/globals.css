@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+header {
+  margin-bottom: 24px;
+}
+
+nav {
+  background-color: #ccc;
+  box-shadow: 0 0 5px #cccccc8b;
+  border-bottom: 1px solid #000;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  gap: 24px;
+}
+
+nav ul li {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  display: block;
+  padding: 16px;
+  color: inherit;
+  transition: 0.3s all;
+}
+
+nav ul li a:hover {
+  opacity: 0.5;
+}
+
+.cards {
+  padding: 0 24px;
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.cards > * {
+  flex-basis: calc((100% - (24px * 3)) / 4);
+}
+.card {
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.card-body {
+  background-color: #fff;
+  padding: 16px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  overflow: hidden;
+}
+.card-img {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-img img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.card-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-body h3 {
+  padding: 0;
+  margin: 0;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.card-body p {
+  font-family: monospace;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.card-btn {
+  display: inline-flex;
+  padding: 8px 16px;
+  border-radius: 16px;
+  background-color: #ddd;
+  font-weight: bold;
+}

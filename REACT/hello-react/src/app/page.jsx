@@ -1,51 +1,28 @@
+import { ProductCard } from "./components/product-card";
+
 export default async function Home() {
   const response = await fetch("https://dummyjson.com/products");
   const data = await response.json();
+
   const { products } = data;
 
   return (
-    <div>
-      <header>
-        <nav>
-          <ul>
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">About</a>
-            </li>
-            <li>
-              <a href="#">Products</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <main>
-        <div className="cards">
-          {products.map((product) => (
-            <Card key={product.id} image={product.thumbnail} title={product.title} price={`$${product.price}`} />
-          ))}
+    <main>
+      <section>
+        <div className="container">
+          <select name="" id="">
+            <option value="">Select category...</option>
+            <option value="">Beauty</option>
+          </select>
+          <div className="row">
+            {products.map((product) => (
+              <div key={product.id}>
+                <ProductCard product={product} />
+              </div>
+            ))}
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }
-
-const Card = (props) => {
-  const { image, title, price } = props;
-
-  return (
-    <article className="card">
-      <div className="card-img">
-        <img src={image} alt="" />
-      </div>
-      <div className="card-body">
-        <div className="card-detail">
-          <h3>{title}</h3>
-          <p>{price}</p>
-        </div>
-        <div className="card-btn">Read more</div>
-      </div>
-    </article>
-  );
-};

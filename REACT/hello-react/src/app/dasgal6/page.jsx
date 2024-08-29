@@ -8,6 +8,7 @@ const Page = () => {
   return (
     <div style={{ padding: "100px" }}>
       <button onClick={() => setShown(!shown)}>toggle</button>
+      {shown ? <p>Hi i am hidden text</p> : <p>Not shown</p>}
       {shown && <p>Hi i am hidden text</p>}
     </div>
   );

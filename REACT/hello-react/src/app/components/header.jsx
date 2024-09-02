@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Logo } from "./logo";
 import { SearchIcon } from "./search-icon";
 
@@ -20,14 +21,14 @@ export const Header = () => {
             </ul>
           </div>
           <div>
-            <a href="#" className="logo">
+            <Link href="/" className="logo">
               <Logo />
-            </a>
+            </Link>
           </div>
           <div>
-            <a href="#" className="search">
+            <Link href="#" className="search">
               <SearchIcon />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

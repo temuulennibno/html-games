@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.rotate-text {
+  writing-mode: vertical-lr;
+  transform: scale(-1, -1);
+}

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { TrendingCard } from "./components/TrendingCard";
 
 export default function Home() {
